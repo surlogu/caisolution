@@ -1,0 +1,25 @@
+/* dashboard */
+
+.report-card {
+    height: 80vh;
+    z-index: 1;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    border-radius: 2.5vh!important;
+}
+
+.report-card:hover {
+    box-shadow: 0 0 11px #f1efef;
+}
+
+.card-size {
+    width: 50%;
+    height: 40%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-right: 2px;
+    display: inline-block;
+}
