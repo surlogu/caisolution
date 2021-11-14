@@ -1,0 +1,83 @@
+<div style="overflow: hidden; font-weight: 500; font-size: 18px;">
+    <h1 style="font-weight: 600; margin-left: 2%; margin-top: 1%;">Profile</h1>
+    <div class="row" style="margin-top:1%;">
+
+        <div class="profile-card-size ">
+            <mat-card class="profile-card " style="margin-left:5%; margin-right:5%;border-radius:5vh;  height: 55vh; ">
+
+                <div class="card-body">
+                    <span *ngIf="!editProfile" style="cursor: pointer; float:right;" (click)="editProfileFun()" class="disable-span material-icons">edit</span>
+
+                    <table>
+                        <tbody [formGroup]="profileForm">
+                            <tr>
+                                <td>Name</td>
+                                <td>:</td>
+                                <td *ngIf="!editProfile">{{profile.name}}</td>
+                                <td *ngIf="editProfile"><input type="text" class="form-control" matInput placeholder="Enter a name" formControlName="name"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>:</td>
+                                <td *ngIf="!editProfile">{{profile.email}}</td>
+                                <td *ngIf="editProfile"><input type="text" class="form-control" matInput placeholder="Enter a email" formControlName="email"></td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>:</td>
+                                <td *ngIf="!editProfile">{{profile.phone}}</td>
+                                <td *ngIf="editProfile"><input type="text" class="form-control" matInput placeholder="Enter a phone number" formControlName="phone"></td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>:</td>
+                                <td *ngIf="!editProfile">{{profile.address}}</td>
+                                <td *ngIf="editProfile"><input type="text" class="form-control" matInput placeholder="Enter a address" formControlName="address"></td>
+                            </tr>
+                            <tr>
+                                <td>Pincode</td>
+                                <td>:</td>
+                                <td *ngIf="!editProfile">{{profile.pincode}}</td>
+                                <td *ngIf="editProfile"><input type="text" class="form-control" matInput placeholder="Enter a pincode" formControlName="pincode"></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div class="row" *ngIf="editProfile">
+                    <div class="col-md-8 col-sm-2 col-xs-6"></div>
+                    <div class="col-md-2 col-sm-2 col-xs-6">
+                        <div class="text-center mx-auto">
+                            <button mat-stroked-button color="primary" (click)='submit()'>
+               Submit
+            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-sm-2 col-xs-6">
+                    </div>
+                </div>
+
+
+            </mat-card>
+        </div>
+
+        <div class="profile-card-size ">
+            <mat-card class="profile-card " style="margin-left:5%; margin-right:5%;border-radius:5vh;  height: 70vh; ">
+
+                <div class="card-body">
+                    <iframe src="https://maps.google.com/maps?q=10.7904833N,78.7046725E&z=15&output=embed" width="500" height="400" frameborder="0" style="border:0"></iframe>
+                </div>
+
+
+            </mat-card>
+        </div>
+
+
+
+
+
+    </div>
+</div>

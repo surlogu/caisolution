@@ -1,0 +1,44 @@
+<div>
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav>
+            <div class="profile" style=" background-color: #192048;text-align: center;">
+                <img class="profile-picture" style="width: 60px; height: 60px; cursor: pointer;" title="profile" (click)="rtp()" src="../../assets/profile.png" />
+                <h3 class="name">Logesh</h3>
+            </div>
+            <mat-nav-list>
+                <a style="text-align: center;" *ngFor="let route of routesList" mat-list-item [routerLink]="route.path" (click)="sidenav.toggle()" [ngStyle]="{'display':route.path === '' ? 'none' : 'block' }"> {{route.label}}</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+
+            <div style="height: 100vh;">
+
+                <mat-toolbar color="primary">
+                    <button mat-icon-button aria-label="Menu" title="menu" (click)="sidenav.open()">
+          <mat-icon>menu</mat-icon>
+        </button>
+                    <h5>DEMO SITE</h5>
+                    <div style="background-color: white; border-color: white;margin-left: 70%; border-radius: 20px;"> <input type="text" [(ngModel)]="searchData" class="form-control" placeholder="search here.." matInput [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let patient of searchList" [value]="patient.data">{{patient.data}}
+
+                            </mat-option>
+                        </mat-autocomplete>
+
+
+
+                    </div>
+                    <button mat-icon-button aria-label="search" title="search" (click)="addSearch()">
+          <mat-icon>search</mat-icon>
+        </button>
+                    <button mat-icon-button aria-label="search" title="logout" (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+        </button>
+                </mat-toolbar>
+
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
+</div>

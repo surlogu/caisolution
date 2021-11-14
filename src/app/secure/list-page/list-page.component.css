@@ -1,0 +1,44 @@
+.mat-header-row {
+    background: #FFFFFF;
+    height: 35px !important;
+}
+
+.mat-header-cell {
+    color: #2B5289;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 0 #2B5289;
+    height: 35px !important;
+}
+
+.mat-row {
+    box-shadow: 0 2px 0 0 #2B5289;
+    transform: scale(1);
+    height: 35px !important;
+    border: none;
+}
+
+.mat-table {
+    vertical-align: middle !important;
+    border-collapse: separate!important;
+    border: none;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-column-id {
+    width: 5rem;
+}
+
+.mat-column-title {
+    width: 30rem;
+}
+
+.mat-column-body {
+    width: 50rem;
+}
+
+.mat-column-view {
+    width: 10rem;
+}

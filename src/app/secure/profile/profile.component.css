@@ -1,0 +1,25 @@
+.profie-card {
+    z-index: 1;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    border-radius: 2.5vh!important;
+}
+
+.profile-card:hover {
+    box-shadow: 0 0 11px #f1efef;
+}
+
+.profile-card-size {
+    width: 50%;
+    height: 50%;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.edit {
+    position: absolute;
+    color: #e7e7e8;
+    right: 14%;
+}

@@ -1,0 +1,46 @@
+<div style="overflow: hidden;">
+    <h1 style="font-weight: 600; margin-left: 2%; margin-top: 1%;">Dashboard</h1>
+    <div class="row" style="margin-top:1%;">
+        <div class="card-size ">
+            <mat-card class="report-card " style="margin-left:5%; margin-right:5%;border-radius:5vh; ">
+
+                <div style="display: block; float:left; width: 50%; margin-top:5%;">
+                    <canvas width='400px' height="400px" baseChart [data]="pieChartDataNew" [labels]="pieChartLabels" [chartType]="pieChartType" [options]="pieChartOptions" [legend]="pieChartLegend">
+  </canvas>
+                </div>
+                <div style="float:right; width: 35%; margin-left: 15%;margin-top:60%; ">
+                    <div>
+                        <p class="dot" style="float:left; background-color: #ffa1b5;"></p>
+                        <p style="font-size: 18px;"> Test1 | 16</p>
+                    </div>
+                    <div>
+                        <p class="dot" style="float:left; background-color: rgba(159, 216, 223, 1);"></p>
+                        <p style="font-size: 18px;"> Test2 | 8</p>
+                    </div>
+                    <div>
+                        <p class="dot" style="float:left; background-color: rgba(240, 246, 150, 1);;"></p>
+                        <p style="font-size: 18px;"> Test3 | 4</p>
+                    </div>
+                </div>
+
+
+            </mat-card>
+        </div>
+        <div class="card-size ">
+            <mat-card class="report-card " style="margin-left:5%; margin-right:5%;border-radius:5vh; ">
+
+                <div style="display: block; float:left; width: 50%; margin-top:5%;">
+                    <canvas width="500px" height="400px" baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType">
+      </canvas>
+                </div>
+
+
+
+            </mat-card>
+        </div>
+
+
+
+
+    </div>
+</div>
